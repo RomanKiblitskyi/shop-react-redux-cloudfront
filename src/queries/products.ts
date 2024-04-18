@@ -6,7 +6,7 @@ import React from "react";
 
 export function useAllProducts() {
   return useQuery<Product[], AxiosError>("products", async () => {
-    const res = await axios.get<Product[]>(`${API_PATHS.bff}/products`);
+    const res = await axios.get<Product[]>(`${API_PATHS.product}/products`);
     return res.data;
   });
 }
